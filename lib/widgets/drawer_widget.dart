@@ -5,6 +5,7 @@ import '../screens/about_screen.dart';
 import '../screens/universities_screen.dart';
 import '../screens/weather_screen.dart';
 import '../screens/pokemon_screen.dart';
+import '../screens/wordpress_screen.dart';
 
 class DrawerWidget extends StatelessWidget {
   @override
@@ -15,9 +16,7 @@ class DrawerWidget extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             child: Text('Menú'),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
+            decoration: BoxDecoration(color: Colors.blue),
           ),
           ListTile(
             title: Text('Predecir Género'),
@@ -70,6 +69,15 @@ class DrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => AboutScreen()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Wordpress'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => WordPressScreen()),
               );
             },
           ),
